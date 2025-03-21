@@ -35,6 +35,8 @@ const eslintConfig = [
           usePrettierrc: false
         }
       ],
+      'prefer-const': 'error',
+      'no-undef': 'error',
       'react/react-in-jsx-scope': 'off',
       'jsx-a11y/alt-text': 'warn',
       'jsx-a11y/aria-props': 'warn',
