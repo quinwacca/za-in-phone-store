@@ -37,6 +37,7 @@ const eslintConfig = [
       ],
       'prefer-const': 'error',
       'no-undef': 'error',
+      'no-console': 'warn',
       'react/react-in-jsx-scope': 'off',
       'jsx-a11y/alt-text': 'warn',
       'jsx-a11y/aria-props': 'warn',
