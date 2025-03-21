@@ -1,0 +1,35 @@
+:root {
+  --font-mono: Helvetica, Arial, sans-serif;
+
+  /* color */
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* gap */
+  --gap-8: 8px;
+  --gap-12: 12px;
+  --gap-16: 16px;
+  --gap-24: 24px;
+  --gap-40: 40px;
+  --gap-48: 48px;
+
+  /* margin */
+  --margin-8: 8px;
+  --margin-12: 12px;
+  --margin-16: 16px;
+  --margin-24: 24px;
+  --margin-40: 40px;
+  --margin-48: 48px;
+
+  /* padding */
+  --padding-8: 8px;
+  --padding-12: 12px;
+  --padding-16: 16px;
+  --padding-24: 24px;
+  --padding-40: 40px;
+  --padding-48: 48px;
+
+  /* size */
+  --size-height-header: 80px;
+  --size-layout-max-width: 1800px;
+}

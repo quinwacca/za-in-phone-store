@@ -1,0 +1,7 @@
+.main {
+  padding: 0 var(--padding-16);
+
+  @media (min-width: 720px) {
+    padding: 0 var(--padding-40);
+  }
+}
