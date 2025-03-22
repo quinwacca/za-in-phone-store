@@ -1,0 +1,30 @@
+.input {
+  border-bottom: 0.5px solid var(--color-black);
+  border: none;
+  color: var(--color-text-black);
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-300);
+  padding-bottom: var(--padding-8);
+  width: 100%;
+
+  &::placeholder {
+    color: var(--color-text-light-gray);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.resultsText {
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-300);
+  text-transform: uppercase;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-12);
+  padding: var(--padding-12) 0;
+}
