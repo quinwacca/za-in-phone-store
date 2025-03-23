@@ -1,6 +1,9 @@
 :root {
   --font-mono: Helvetica, Arial, sans-serif;
 
+  /* border */
+  --border-black-1: 1px solid var(--color-black);
+
   /* color */
   --color-black: #000000;
   --color-white: #ffffff;
