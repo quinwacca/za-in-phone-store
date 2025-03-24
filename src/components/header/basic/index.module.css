@@ -10,3 +10,7 @@
     padding: 0 var(--padding-40);
   }
 }
+
+.logo {
+  height: var(--size-logo-height);
+}
