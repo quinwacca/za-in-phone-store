@@ -12,7 +12,7 @@ const InputSearch = () => {
   const debouncedValue = useDebounce({value: searchValue})
 
   useEffect(() => {
-    console.log('searching...', debouncedValue)
+    if (debouncedValue !== '') console.log('searching...', debouncedValue)
     // TO DO: search use case
   }, [debouncedValue])
 
@@ -26,6 +26,7 @@ const InputSearch = () => {
         <input
           aria-label="Search for a smartphone"
           className={styles.input}
+          name="search"
           onChange={event => setSearchValue(event.target.value)}
           placeholder="Search for a smartphone..."
           spellCheck="false"
