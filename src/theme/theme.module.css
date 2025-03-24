@@ -1,13 +1,16 @@
 :root {
   --font-mono: Helvetica, Arial, sans-serif;
 
-  /* border */
-  --border-black-1: 1px solid var(--color-black);
-
   /* color */
   --color-black: #000000;
   --color-white: #ffffff;
   --color-light-gray: #aaaaaa;
+
+  /* border */
+  --border-black-1: 1px solid var(--color-black);
+
+  /* box-shadow */
+  --box-shadow-light-gray: 0px 8px 10px -8px var(--color-light-gray);
 
   /* color-text */
   --color-text-black: var(--color-black);

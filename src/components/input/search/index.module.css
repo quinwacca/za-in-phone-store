@@ -5,6 +5,7 @@
   font-size: var(--font-size-16);
   font-weight: var(--font-weight-300);
   padding-bottom: var(--padding-8);
+  transition: box-shadow 0.3s ease-in-out;
   width: 100%;
 
   &::placeholder {
@@ -12,7 +13,17 @@
   }
 
   &:focus {
+    box-shadow: 0px 8px 10px -8px var(--box-shadow-light-gray);
     outline: none;
+  }
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    background: url("/close.svg") no-repeat 50% 50%;
+    background-size: contain;
+    height: 1.2em;
+    opacity: 1;
+    width: 1.2em;
   }
 }
 
