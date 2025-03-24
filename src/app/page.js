@@ -1,6 +1,8 @@
 import {domain} from '@/domain'
 
+import CardProduct from '@/components/card/product'
 import InputSearch from '@/components/input/search'
+
 import styles from './page.module.css'
 
 const HomePage = async ({searchParams}) => {
@@ -20,11 +22,14 @@ const HomePage = async ({searchParams}) => {
         <span className={styles.resultsText}>{`${products?.length ?? '0'} results`}</span>
       </div>
       <div>
-        <h2>Phones List</h2>
         {searchProductsError && <p>{`Oops! Something went wrong!`}</p>}
-        <ul>
-          {products.map(product => {
-            return <li key={product.id}>{`${product.brand} - ${product.name}`}</li>
+        <ul className={styles.list}>
+          {products.map(({basePrice, brand, id, imageUrl, name}) => {
+            return (
+              <li key={id} className={styles.listItem}>
+                <CardProduct basePrice={basePrice} brand={brand} id={id} imageUrl={imageUrl} name={name} />
+              </li>
+            )
           })}
         </ul>
       </div>
