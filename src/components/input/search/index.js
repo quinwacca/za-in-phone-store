@@ -21,20 +21,17 @@ const InputSearch = () => {
   }
 
   return (
-    <div className={styles.wrapper}>
-      <form role="search" onSubmit={handleFormSubmit}>
-        <input
-          aria-label="Search for a smartphone"
-          className={styles.input}
-          name="search"
-          onChange={event => setSearchValue(event.target.value)}
-          placeholder="Search for a smartphone..."
-          spellCheck="false"
-          type="search"
-        />
-      </form>
-      <span className={styles.resultsText}>20 results</span>
-    </div>
+    <form role="search" onSubmit={handleFormSubmit}>
+      <input
+        aria-label="Search for a smartphone"
+        className={styles.input}
+        name="search"
+        onChange={event => setSearchValue(event.target.value)}
+        placeholder="Search for a smartphone..."
+        spellCheck="false"
+        type="search"
+      />
+    </form>
   )
 }
 
