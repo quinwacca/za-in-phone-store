@@ -4,7 +4,10 @@
   display: flex;
   height: var(--size-height-header);
   justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--size-layout-max-width);
   padding: 0 var(--padding-16);
+  width: 100%;
 
   @media (min-width: 720px) {
     padding: 0 var(--padding-40);
