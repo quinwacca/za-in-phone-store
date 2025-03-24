@@ -9,6 +9,7 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "test": "vitest",
+    "test:once": "vitest run",
     "prepare": "husky"
   },
   "dependencies": {
