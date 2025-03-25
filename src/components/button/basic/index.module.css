@@ -1,0 +1,22 @@
+.button {
+  background: var(--color-black);
+  border: var(--border-black-1);
+  color: var(--color-text-white);
+  cursor: pointer;
+  font-size: var(--font-size-12);
+  text-transform: uppercase;
+  padding: var(--padding-16);
+  outline-offset: 4px;
+  width: 100%;
+
+  &:hover {
+    background-color: var(--color-dark-gray);
+  }
+
+  &:disabled {
+    background-color: var(--color-lightest-gray);
+    border: none;
+    color: var(--color-lighter-gray);
+    cursor: unset;
+  }
+}
