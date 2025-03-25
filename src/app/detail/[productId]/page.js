@@ -1,17 +1,17 @@
-import {domain} from '@/domain'
+// import {domain} from '@/domain'
 import ListSpecs from '@/components/list/specs'
 import PanelBuyProduct from '@/components/panel/buyProduct'
 
 import styles from './detailPage.module.css'
 
-const DetailPage = async ({params}) => {
-  const {productId} = await params
-  const [, getProductResponse = {}] = await domain.getProductUseCase({id: productId})
-  // const [getProductError, getProductResponse = {}] = await domain.getProductUseCase({id: productId})
+const DetailPage = async () => {
+  // const DetailPage = async ({params}) => {
+  // const {productId} = await params
+  // const [getProductError, getProductResponse: product = {}] = await domain.getProductUseCase({id: productId})
 
   // if (Boolean(getProductError)) return <h2>{`Oops! Something went wrong!`}</h2>
 
-  const product = getProductResponse ?? fixtureSamsung
+  const product = fixtureSamsung
   const {brand, description, name, specs} = product
 
   return (
