@@ -4,8 +4,6 @@ import Link from 'next/link'
 import styles from './index.module.css'
 
 const CardProduct = ({basePrice, brand, id, imageUrl, name}) => {
-  //  TO DO: add product page link with id
-
   return (
     <Link className={styles.link} href="/detail/[id]" as={`/detail/${id}`}>
       <article className={styles.card}>

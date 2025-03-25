@@ -1,14 +1,18 @@
 :root {
-  --font-mono: Helvetica, Arial, sans-serif;
+  --font-family: Helvetica, Arial, sans-serif;
 
   /* color */
   --color-black: #000000;
-  --color-white: #ffffff;
+  --color-dark-gray: #3e3e3e;
   --color-light-gray: #aaaaaa;
+  --color-lighter-gray: #c2bfbc;
+  --color-lightest-gray: #f3f2f2;
+  --color-white: #ffffff;
 
   /* border */
   --border-black-1: 1px solid var(--color-black);
   --border-light-gray-1: 1px solid var(--color-light-gray);
+  --border-lighter-gray-1: 1px solid var(--color-lighter-gray);
 
   /* box-shadow */
   --box-shadow-light-gray: 0px 8px 10px -8px var(--color-light-gray);
@@ -16,12 +20,15 @@
   /* color-text */
   --color-text-black: var(--color-black);
   --color-text-light-gray: var(--color-light-gray);
+  --color-text-white: var(--color-white);
 
   /* font-size */
   --font-size-10: 10px;
   --font-size-12: 12px;
+  --font-size-14: 14px;
   --font-size-16: 16px;
   --font-size-20: 20px;
+  --font-size-24: 24px;
 
   /* font-weight */
   --font-weight-300: 300;
@@ -35,17 +42,24 @@
   --gap-24: 24px;
   --gap-40: 40px;
   --gap-48: 48px;
+  --gap-64: 64px;
 
   /* margin */
   --margin-8: 8px;
   --margin-12: 12px;
   --margin-16: 16px;
+  --margin-20: 20px;
   --margin-24: 24px;
+  --margin-32: 32px;
   --margin-40: 40px;
   --margin-48: 48px;
+  --margin-64: 64px;
+  --margin-80: 80px;
+  --margin-154: 154px;
 
   /* padding */
   --padding-1: 1px;
+  --padding-2: 2px;
   --padding-4: 4px;
   --padding-8: 8px;
   --padding-12: 12px;

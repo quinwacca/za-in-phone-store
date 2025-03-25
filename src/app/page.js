@@ -9,6 +9,8 @@ const HomePage = async ({searchParams}) => {
   const searchValue = (await searchParams).search
   const [searchProductsError, searchProductsResponse = []] = await domain.searchProductsUseCase({query: searchValue})
 
+  if (Boolean(searchProductsError)) return <h2>{`Oops! Something went wrong!`}</h2>
+
   // had to remove duplicates to avoid React warning about keys
   // XMI-RN13P5G appears more than once in the list1
   const products = Array.from(new Set(searchProductsResponse.map(product => product.id))).map(id =>
@@ -22,7 +24,7 @@ const HomePage = async ({searchParams}) => {
         <span className={styles.resultsText}>{`${products?.length ?? '0'} results`}</span>
       </div>
       <div>
-        {searchProductsError ? <h2>{`Oops! Something went wrong!`}</h2> : <ListCardProduct products={products} />}
+        <ListCardProduct products={products} />
       </div>
     </div>
   )
