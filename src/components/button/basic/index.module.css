@@ -4,9 +4,9 @@
   color: var(--color-text-white);
   cursor: pointer;
   font-size: var(--font-size-12);
-  text-transform: uppercase;
   padding: var(--padding-16);
   outline-offset: 4px;
+  text-transform: uppercase;
   width: 100%;
 
   &:hover {
