@@ -1,5 +1,5 @@
 const importFactory = ({context, params, useCase}) =>
-  import(`./${context}/useCases/${useCase}`)
+  import(`./${context}/useCases/${useCase}.js`)
     .then(module => module[useCase].create())
     .then(useCase => useCase.execute(params))
     // returning response with an [error, response] tuple
