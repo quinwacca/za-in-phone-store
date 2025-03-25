@@ -16,4 +16,8 @@
 
 .logo {
   height: var(--size-logo-height);
+
+  &:hover {
+    box-shadow: var(--box-shadow-light-gray);
+  }
 }

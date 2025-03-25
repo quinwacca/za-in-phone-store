@@ -21,8 +21,9 @@
     -webkit-appearance: none;
     background: url("/close.svg") no-repeat 50% 50%;
     background-size: contain;
-    height: 1.2em;
+    cursor: pointer;
+    height: 20px;
     opacity: 1;
-    width: 1.2em;
+    width: 20px;
   }
 }

@@ -1,20 +1,22 @@
 'use client'
 
 import {useEffect, useState} from 'react'
-import {useRouter} from 'next/navigation'
+import {useSearchParams, useRouter} from 'next/navigation'
 
 import {useDebounce} from '@/hooks/useDebounce'
 
 import styles from './index.module.css'
 
 const InputSearch = () => {
+  const params = useSearchParams()
   const router = useRouter()
-  const [searchValue, setSearchValue] = useState()
+
+  const [searchValue, setSearchValue] = useState(params.get('search'))
 
   const debouncedValue = useDebounce({value: searchValue})
 
   useEffect(() => {
-    if (debouncedValue === undefined) {
+    if (debouncedValue === undefined || debouncedValue === null) {
       return
     }
 
@@ -40,6 +42,7 @@ const InputSearch = () => {
         placeholder="Search for a smartphone..."
         spellCheck="false"
         type="search"
+        value={searchValue ?? ''}
       />
     </form>
   )
