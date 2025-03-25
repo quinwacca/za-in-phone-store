@@ -26,6 +26,8 @@
 }
 
 .buyOptions {
+  flex-grow: 1;
+
   @media (min-width: 720px) {
     max-width: 380px;
   }
