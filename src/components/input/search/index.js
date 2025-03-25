@@ -19,14 +19,13 @@ const InputSearch = () => {
     if (debouncedValue === undefined || debouncedValue === null) {
       return
     }
-
-    if (debouncedValue === '') {
-      router.push(`/`)
-      return
-    }
-
-    router.push(`/?search=${debouncedValue}`)
+    const url = debouncedValue === '' ? '/' : `/?search=${debouncedValue}`
+    router.push(url)
   }, [debouncedValue, router])
+
+  useEffect(() => {
+    if (Boolean(searchValue) && !params.has('search')) setSearchValue(null)
+  }, [params]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFormSubmit = event => {
     event.preventDefault()
