@@ -7,6 +7,7 @@ const importFactory = ({context, params, useCase}) =>
     .catch(error => [error, null])
 
 const productsUseCases = {
+  getProductUseCase: params => importFactory({context: 'products', params, useCase: 'GetProductUseCase'}),
   searchProductsUseCase: params => importFactory({context: 'products', params, useCase: 'SearchProductsUseCase'})
 }
 

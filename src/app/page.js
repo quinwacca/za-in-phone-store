@@ -22,7 +22,7 @@ const HomePage = async ({searchParams}) => {
         <span className={styles.resultsText}>{`${products?.length ?? '0'} results`}</span>
       </div>
       <div>
-        {searchProductsError ? <p>{`Oops! Something went wrong!`}</p> : <ListCardProduct products={products} />}
+        {searchProductsError ? <h2>{`Oops! Something went wrong!`}</h2> : <ListCardProduct products={products} />}
       </div>
     </div>
   )
