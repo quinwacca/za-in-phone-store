@@ -14,9 +14,15 @@ export class HttpProductsRepository {
   }
 
   async getProduct({id} = {}) {
-    const apiUrl = `${this.#productsApiUrl}${id}`
+    const apiUrl = `${this.#productsApiUrl}/${id}`
 
-    this.#fetcher.get(apiUrl).then(res => res.json())
+    return this.#fetcher.get(apiUrl).then(res => {
+      if (res.status !== 200) {
+        throw new Error('Product not found')
+      }
+
+      return res.json()
+    })
   }
 
   async searchProducts({query, limit, offset} = {}) {
@@ -25,6 +31,12 @@ export class HttpProductsRepository {
 
     const apiUrl = `${this.#productsApiUrl}?${urlSearchParams.toString()}`
 
-    return this.#fetcher.get(apiUrl).then(res => res.json())
+    return this.#fetcher.get(apiUrl).then(res => {
+      if (res.status !== 200) {
+        throw new Error('Product not found')
+      }
+
+      return res.json()
+    })
   }
 }
