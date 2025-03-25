@@ -9,7 +9,16 @@ const CardProduct = ({basePrice, brand, id, imageUrl, name}) => {
   return (
     <Link className={styles.link} href="/detail/[id]" as={`/detail/${id}`}>
       <article className={styles.card}>
-        <Image className={styles.image} src={imageUrl} alt={`${brand} ${name} image`} width={310} height={257} />
+        <div className={styles.imageWrapper}>
+          <Image
+            className={styles.image}
+            src={imageUrl}
+            alt={`${brand} ${name} image`}
+            width={310}
+            height={257}
+            priority
+          />
+        </div>
         <div className={styles.info}>
           <div className={styles.infoText}>
             <h3 className={styles.infoBrand}>{`${brand}`}</h3>

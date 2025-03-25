@@ -1,20 +1,30 @@
 'use client'
 
-import styles from './index.module.css'
-
 import {useEffect, useState} from 'react'
+import {useRouter} from 'next/navigation'
 
 import {useDebounce} from '@/hooks/useDebounce'
 
+import styles from './index.module.css'
+
 const InputSearch = () => {
-  const [searchValue, setSearchValue] = useState('')
+  const router = useRouter()
+  const [searchValue, setSearchValue] = useState()
 
   const debouncedValue = useDebounce({value: searchValue})
 
   useEffect(() => {
-    if (debouncedValue !== '') console.log('searching...', debouncedValue)
-    // TO DO: search use case
-  }, [debouncedValue])
+    if (debouncedValue === undefined) {
+      return
+    }
+
+    if (debouncedValue === '') {
+      router.push(`/`)
+      return
+    }
+
+    router.push(`/?search=${debouncedValue}`)
+  }, [debouncedValue, router])
 
   const handleFormSubmit = event => {
     event.preventDefault()

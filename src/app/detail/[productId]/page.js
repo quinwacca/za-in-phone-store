@@ -1,7 +1,7 @@
 import {domain} from '@/domain'
 
 const DetailPage = async ({params}) => {
-  const {productId} = params
+  const {productId} = await params
   const [searchProductsError, searchProductsResponse = {}] = await domain.getProductUseCase({id: productId})
 
   return (
