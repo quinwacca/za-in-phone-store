@@ -6,7 +6,8 @@ import styles from './detailPage.module.css'
 
 const DetailPage = async ({params}) => {
   const {productId} = await params
-  const [getProductError, getProductResponse = {}] = await domain.getProductUseCase({id: productId})
+  const [, getProductResponse = {}] = await domain.getProductUseCase({id: productId})
+  // const [getProductError, getProductResponse = {}] = await domain.getProductUseCase({id: productId})
 
   // if (Boolean(getProductError)) return <h2>{`Oops! Something went wrong!`}</h2>
 
