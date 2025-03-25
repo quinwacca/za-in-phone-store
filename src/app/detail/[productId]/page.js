@@ -1,9 +1,9 @@
 const DetailPage = ({params}) => {
-  const {model} = params
+  const {productId} = params
 
   return (
     <div>
-      <h1>{model}</h1>
+      <h1>{productId}</h1>
     </div>
   )
 }
