@@ -13,6 +13,12 @@ export class HttpProductsRepository {
     this.#productsApiUrl = '/products'
   }
 
+  async getProduct({id} = {}) {
+    const apiUrl = `${this.#productsApiUrl}${id}`
+
+    this.#fetcher.get(apiUrl).then(res => res.json())
+  }
+
   async searchProducts({query, limit, offset} = {}) {
     const urlSearchParams = new URLSearchParams(`?limit=${limit}&offset=${offset}`)
     if (query !== undefined) urlSearchParams.append('search', query)
