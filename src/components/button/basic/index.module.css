@@ -15,7 +15,7 @@
 
   &:disabled {
     background-color: var(--color-lightest-gray);
-    border: none;
+    border: var(--border-lightest-gray-1);
     color: var(--color-lighter-gray);
     cursor: unset;
   }
