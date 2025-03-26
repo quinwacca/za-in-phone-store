@@ -8,6 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-right: var(--margin-80);
+    margin-top: var(--margin-48);
   }
 
   @media (min-width: 1200px) {
