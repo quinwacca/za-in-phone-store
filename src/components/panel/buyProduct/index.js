@@ -57,7 +57,7 @@ const PanelBuyProduct = ({product}) => {
 
         <ColorSelector colorOptions={colorOptions} onSelect={setSelectedColor} selectedColor={selectedColor?.name} />
 
-        <ButtonAddToCart productId={id} selectedCapacity={selectedCapacity} selectedColor={selectedColor} />
+        <ButtonAddToCart model={model} id={id} selectedCapacity={selectedCapacity} selectedColor={selectedColor} />
       </div>
     </article>
   )
