@@ -1,13 +1,39 @@
-.button {
-  background: var(--color-black);
-  border: var(--border-black-1);
-  color: var(--color-text-white);
+.button,
+.buttonOutline,
+.buttonSolid {
   cursor: pointer;
   font-size: var(--font-size-12);
-  padding: var(--padding-16);
+  padding: var(--padding-16) var(--padding-32);
   outline-offset: 4px;
   text-transform: uppercase;
   width: 100%;
+
+  &:disabled {
+    cursor: unset;
+  }
+}
+
+.buttonOutline {
+  background-color: var(--color-white);
+  border: var(--border-darker-gray-1);
+  color: var(--color-black);
+
+  &:hover {
+    background-color: var(--color-lightest-gray);
+  }
+
+  &:disabled {
+    background-color: var(--color-white);
+    border: var(--border-lightest-gray-1);
+    color: var(--color-lighter-gray);
+    cursor: unset;
+  }
+}
+
+.buttonSolid {
+  background-color: var(--color-black);
+  border: var(--border-black-1);
+  color: var(--color-text-white);
 
   &:hover {
     background-color: var(--color-dark-gray);
