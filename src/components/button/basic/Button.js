@@ -1,13 +1,21 @@
 import styles from './index.module.css'
 
+import {COLORS as COLOR_TYPES, DESIGN_TYPES} from './config'
+
 const DESIGNS = {
-  OUTLINE: styles.buttonOutline,
-  SOLID: styles.buttonSolid
+  [DESIGN_TYPES.OUTLINE]: styles.buttonOutline,
+  [DESIGN_TYPES.SIMPLE]: styles.buttonSimple,
+  [DESIGN_TYPES.SOLID]: styles.buttonSolid
 }
 
-const ButtonBasicComponent = ({children, design, disabled, onClick}) => {
+const COLORS = {
+  [COLOR_TYPES.PRIMARY]: '', // no color needed for primary
+  [COLOR_TYPES.ERROR]: styles.buttonColorError
+}
+
+const ButtonBasicComponent = ({children, color, design, disabled, onClick}) => {
   return (
-    <button className={DESIGNS[design]} disabled={disabled} onClick={onClick}>
+    <button className={`${DESIGNS[design]} ${COLORS[color]}`} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   )
