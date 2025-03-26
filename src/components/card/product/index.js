@@ -12,8 +12,8 @@ const CardProduct = ({basePrice, brand, id, imageUrl, name}) => {
             className={styles.image}
             src={imageUrl}
             alt={`${brand} ${name} image`}
-            width={310}
-            height={257}
+            width={384}
+            height={384}
             priority
           />
         </div>

@@ -25,8 +25,8 @@ const PanelBuyProduct = ({product}) => {
           className={styles.image}
           src={selectedColor?.imageUrl ?? colorOptions[0].imageUrl}
           alt={`${brand} ${model} image`}
-          width={310}
-          height={257}
+          width={384}
+          height={384}
           priority
         />
       </div>

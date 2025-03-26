@@ -4,25 +4,34 @@
   gap: var(--gap-40);
 
   @media (min-width: 720px) {
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
     margin-right: var(--margin-80);
+    margin-top: var(--margin-48);
   }
 
   @media (min-width: 1200px) {
     margin-right: 0;
+    margin-top: var(--margin-110);
   }
 }
 
 .imageWrapper {
-  display: flex;
-  justify-content: center;
-  max-height: 260px;
+  height: 273px;
+
+  @media (min-width: 720px) {
+    height: 416px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 630px;
+  }
 }
 
 .image {
-  object-fit: contain;
-  z-index: 1000;
+  height: 100%;
+  width: auto;
 }
 
 .buyOptions {
