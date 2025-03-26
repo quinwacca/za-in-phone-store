@@ -33,7 +33,7 @@ const CartPage = () => {
             <span>Total</span> <span>{`${totalPrice} EUR`}</span>
           </div>
           <div className={styles.continueShopping}>
-            <ButtonBasic design={buttonBasicDesigns.OUTLINE} type={buttonBasicTypes.LINK}>
+            <ButtonBasic href="/" design={buttonBasicDesigns.OUTLINE} type={buttonBasicTypes.LINK}>
               Continue shopping
             </ButtonBasic>
           </div>
@@ -43,7 +43,7 @@ const CartPage = () => {
         </div>
       ) : (
         <div className={styles.emptyCart}>
-          <ButtonBasic design={buttonBasicDesigns.OUTLINE} type={buttonBasicTypes.LINK}>
+          <ButtonBasic href="/" design={buttonBasicDesigns.OUTLINE} type={buttonBasicTypes.LINK}>
             Continue shopping
           </ButtonBasic>
         </div>
