@@ -1,42 +1,44 @@
 'use client'
 
-import {createContext, useContext, useState} from 'react'
+import {createContext, useContext, useEffect, useState} from 'react'
+
+import {domain} from '@/domain'
 
 const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
   const [cart, setCart] = useState([])
 
+  useEffect(() => {
+    const getCart = async () => {
+      const [getCartError, getCartResponse] = await domain.getCartUseCase()
+
+      if (getCartError) return
+
+      setCart(getCartResponse)
+    }
+
+    getCart()
+  }, [])
+
   const cartSize = cart.length
 
   const totalPrice = cart.reduce((total, {selectedCapacity: {price}}) => total + price, 0)
 
-  const addToCart = newProduct => {
-    setCart(previousCart => {
-      const isProductInCart = previousCart.some(
-        ({id, selectedCapacity, selectedColor}) =>
-          id === newProduct.id &&
-          selectedCapacity.capacity === newProduct.selectedCapacity.capacity &&
-          selectedColor.name === newProduct.selectedColor.name
-      )
+  const addToCart = async newProduct => {
+    const [addToCartError, addToCartResponse] = await domain.addToCartUseCase(newProduct)
 
-      return isProductInCart ? [...previousCart] : [...previousCart, newProduct]
-    })
+    if (addToCartError) return
+
+    setCart(addToCartResponse)
   }
 
-  const removeFromCart = removedProduct => {
-    setCart(previousCart => {
-      const cartWithoutRemovedProduct = previousCart.filter(
-        ({id, selectedCapacity, selectedColor}) =>
-          !(
-            id === removedProduct.id &&
-            selectedCapacity.capacity === removedProduct.selectedCapacity.capacity &&
-            selectedColor.name === removedProduct.selectedColor.name
-          )
-      )
+  const removeFromCart = async removedProduct => {
+    const [removeFromCartError, removeFromCartResponse] = await domain.removeFromCartUseCase(removedProduct)
 
-      return cartWithoutRemovedProduct
-    })
+    if (removeFromCartError) return
+
+    setCart(removeFromCartResponse)
   }
 
   return (

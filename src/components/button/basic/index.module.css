@@ -3,7 +3,7 @@
 .buttonSolid {
   cursor: pointer;
   font-size: var(--font-size-12);
-  padding: var(--padding-16) var(--padding-32);
+  padding: var(--padding-16);
   outline-offset: 4px;
   text-transform: uppercase;
   width: 100%;
