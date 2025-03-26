@@ -1,7 +1,7 @@
 .detailWrapper {
   --size-detail-wrapper-max-width: 1200px;
 
-  margin: 0 auto;
+  margin: 0 auto var(--margin-154);
   max-width: var(--size-detail-wrapper-max-width);
 }
 
