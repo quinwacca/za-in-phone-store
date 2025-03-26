@@ -3,13 +3,16 @@ import styles from './layout.module.css'
 
 import HeaderBasic from '@/components/header/basic'
 import LayoutContainer from '@/components/layout/container'
+import {CartProvider} from '@/contexts/cart'
 
 const RootLayout = ({children}) => {
   return (
     <html lang="en">
       <body className={styles.layout}>
-        <HeaderBasic />
-        <LayoutContainer>{children}</LayoutContainer>
+        <CartProvider>
+          <HeaderBasic />
+          <LayoutContainer>{children}</LayoutContainer>
+        </CartProvider>
       </body>
     </html>
   )

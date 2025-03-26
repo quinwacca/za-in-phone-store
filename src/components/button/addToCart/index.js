@@ -1,13 +1,16 @@
 import styles from './index.module.css'
 
+import {useCart} from '@/contexts/cart'
 import ButtonBasic from '@/components/button/basic'
 
-const ButtonAddToCart = ({productId, selectedCapacity, selectedColor}) => {
+const ButtonAddToCart = ({id, model, selectedCapacity, selectedColor}) => {
+  const {addToCart} = useCart()
+
   return (
     <div className={styles.buttonWrapper}>
       <ButtonBasic
         disabled={!Boolean(selectedCapacity) || !Boolean(selectedColor)}
-        onClick={() => console.log({productId})}
+        onClick={() => addToCart({id, model, selectedCapacity, selectedColor})}
       >
         Add to cart
       </ButtonBasic>

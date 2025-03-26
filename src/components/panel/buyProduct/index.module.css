@@ -6,6 +6,7 @@
   @media (min-width: 720px) {
     align-items: center;
     flex-direction: row;
+    gap: var(--gap-24);
     justify-content: space-between;
     margin-right: var(--margin-80);
     margin-top: var(--margin-48);
@@ -19,6 +20,7 @@
 
 .imageWrapper {
   height: 273px;
+  position: relative;
 
   @media (min-width: 720px) {
     height: 416px;
@@ -29,8 +31,25 @@
   }
 }
 
-.image {
+.image,
+.imageSelected {
   height: 100%;
+  position: absolute;
+  width: auto;
+}
+
+.image {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.imageSelected {
+  transition: opacity 0.3s ease;
+}
+
+.imagePlaceholder {
+  height: 100%;
+  opacity: 0;
   width: auto;
 }
 

@@ -21,9 +21,25 @@ const PanelBuyProduct = ({product}) => {
   return (
     <article className={styles.article}>
       <div className={styles.imageWrapper}>
+        {colorOptions.map(({imageUrl, name}, index) => {
+          const isSelected = selectedColor?.name === name
+          const isNotSelectionButItsFirst = !Boolean(selectedColor) && index === 0
+          const className = isSelected || isNotSelectionButItsFirst ? styles.imageSelected : styles.image
+          return (
+            <Image
+              className={className}
+              key={name}
+              src={imageUrl}
+              alt={`${brand} ${model} ${name} image`}
+              width={384}
+              height={384}
+              priority
+            />
+          )
+        })}
         <Image
-          className={styles.image}
-          src={selectedColor?.imageUrl ?? colorOptions[0].imageUrl}
+          className={styles.imagePlaceholder}
+          src={colorOptions[0].imageUrl}
           alt={`${brand} ${model} image`}
           width={384}
           height={384}
@@ -41,7 +57,7 @@ const PanelBuyProduct = ({product}) => {
 
         <ColorSelector colorOptions={colorOptions} onSelect={setSelectedColor} selectedColor={selectedColor?.name} />
 
-        <ButtonAddToCart productId={id} selectedCapacity={selectedCapacity} selectedColor={selectedColor} />
+        <ButtonAddToCart model={model} id={id} selectedCapacity={selectedCapacity} selectedColor={selectedColor} />
       </div>
     </article>
   )
