@@ -4,6 +4,7 @@
   /* color */
   --color-black: #000000;
   --color-dark-gray: #3e3e3e;
+  --color-darker-gray: #1b1a1b;
   --color-light-gray: #aaaaaa;
   --color-lighter-gray: #c2bfbc;
   --color-lightest-gray: #f3f2f2;
@@ -11,6 +12,7 @@
 
   /* border */
   --border-black-1: 1px solid var(--color-black);
+  --border-darker-gray-1: 1px solid var(--color-darker-gray);
   --border-light-gray-1: 1px solid var(--color-light-gray);
   --border-lighter-gray-1: 1px solid var(--color-lighter-gray);
   --border-lightest-gray-1: 1px solid var(--color-lightest-gray);
@@ -44,7 +46,9 @@
   --gap-24: 24px;
   --gap-40: 40px;
   --gap-48: 48px;
+  --gap-56: 56px;
   --gap-64: 64px;
+  --gap-80: 80px;
 
   /* margin */
   --margin-4: 4px;
@@ -69,8 +73,10 @@
   --padding-12: 12px;
   --padding-16: 16px;
   --padding-24: 24px;
+  --padding-32: 32px;
   --padding-40: 40px;
   --padding-48: 48px;
+  --padding-56: 56px;
 
   /* size */
   --size-height-header: 80px;
