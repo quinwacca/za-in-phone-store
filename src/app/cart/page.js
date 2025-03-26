@@ -1,30 +1,22 @@
 'use client'
 
 import {useCart} from '@/contexts/cart'
+
 import ButtonBasic, {buttonBasicDesigns, buttonBasicTypes} from '@/components/button/basic'
+import ListCardCartItem from '@/components/list/cardCartItem'
 
 import styles from './cartPage.module.css'
 
 const CartPage = () => {
-  const {cart, cartSize, totalPrice, removeFromCart} = useCart()
+  const {cartSize, totalPrice} = useCart()
 
   const areProductsInCart = cartSize > 0
 
   return (
     <div className={styles.wrapper}>
-      <div>
+      <div className={styles.cart}>
         <h1 className={styles.counter}>Cart ({cartSize.toString()})</h1>
-        {cart.map(({id, model, selectedCapacity, selectedColor}) => (
-          <div key={`${id}-${selectedCapacity.capacity}-${selectedColor.name}`}>
-            <h2>{model}</h2>
-            <p>Color: {selectedColor.name}</p>
-            <p>Capacity: {selectedCapacity.capacity}</p>
-            <p>Price: {selectedCapacity.price}</p>
-            <button onClick={() => removeFromCart({id, model, selectedCapacity, selectedColor})}>
-              Remove from cart
-            </button>
-          </div>
-        ))}
+        <ListCardCartItem />
       </div>
 
       {areProductsInCart ? (
