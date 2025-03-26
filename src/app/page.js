@@ -12,7 +12,7 @@ const HomePage = async ({searchParams}) => {
   if (Boolean(searchProductsError)) return <h2>{`Oops! Something went wrong!`}</h2>
 
   // had to remove duplicates to avoid React warning about keys
-  // XMI-RN13P5G appears more than once in the list1
+  // XMI-RN13P5G appears more than once in the list
   const products = Array.from(new Set(searchProductsResponse.map(product => product.id))).map(id =>
     searchProductsResponse.find(product => product.id === id)
   )
