@@ -115,14 +115,18 @@ describe('searchProductsUseCase Test', () => {
   afterAll(() => server.close())
   afterEach(() => server.resetHandlers())
 
-  it('should return a list of products with no filters applied', async () => {
+  it('should return a list of products with no filters applied, filtering duplicates', async () => {
     const {searchProductsUseCase} = domain
 
     const [useCaseError, useCaseResponse] = await searchProductsUseCase()
 
+    const filteredFixture = Array.from(new Set(fixture.map(product => product.id))).map(id =>
+      fixture.find(product => product.id === id)
+    )
+
     expect(useCaseError).toBeNull()
     expect(useCaseResponse.length).toBe(9)
-    expect(useCaseResponse).toStrictEqual(fixture)
+    expect(useCaseResponse).toStrictEqual(filteredFixture)
   })
 
   it('should return a list of products filtered by limit and search string', async () => {
