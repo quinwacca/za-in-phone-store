@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event'
 
 import {describe, it, expect} from 'vitest'
 
-import ButtonBasic from '../../../components/button/basic'
+import ButtonBasic from '@/components/button/basic'
 
 const user = userEvent.setup()
 

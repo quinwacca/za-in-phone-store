@@ -1,15 +1,20 @@
 import {describe, it, expect} from 'vitest'
 import {render, screen} from '@testing-library/react'
-import RootLayout, {metadata} from '../../app/layout'
+import {metadata} from '../../app/layout'
+import HeaderBasic from '@/components/header/basic'
+import LayoutContainer from '@/components/layout/container'
+import {CartProvider} from '@/contexts/cart'
 
-describe('RootLayout Component', () => {
-  it('renders the HeaderBasic, LayoutContainer, and footer', () => {
+describe('LayoutContainer, HeaderBasic, and CartProvider test. And home metadata', () => {
+  it('renders the HeaderBasic and LayoutContainer, with the CartProvider', () => {
     render(
-      <RootLayout>
-        <div>Layout test!</div>
-      </RootLayout>
+      <CartProvider>
+        <HeaderBasic />
+        <LayoutContainer>Layout test!</LayoutContainer>
+      </CartProvider>
     )
 
+    expect(screen.getByRole('banner')).toBeDefined()
     expect(screen.getByRole('main')).toBeDefined()
     expect(screen.getByText('Layout test!')).toBeDefined()
   })
