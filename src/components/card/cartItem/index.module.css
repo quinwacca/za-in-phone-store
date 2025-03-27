@@ -1,6 +1,6 @@
 .card {
   display: flex;
-  gap: var(--gap-8);
+  gap: var(--gap-24);
   justify-content: flex-start;
 }
 
