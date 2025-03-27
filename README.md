@@ -10,10 +10,8 @@ The app it's deployed at Vercel: [mbst.vercel.app](https://mbst.vercel.app)
 ```bash
 # first
 npm install
-# and then it can be run on development mode with
+# and then run
 npm run dev   # next dev --turbopack
-# or in production mode with
-npm run start   # npm run build && next start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -22,9 +20,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ```bash
 # first
 npm install
-# and then it can be run on development mode with
-npm run dev   # next dev --turbopack
-# or in production mode with
+# and then run
 npm run start   # npm run build && next start
 ```
 
@@ -49,7 +45,7 @@ npm run lint    # next lint
 🛒 At the `cart page` we can see all the products added to the cart. There is no limit, but the user can not add the same product twice. (no counter appears on the design so I guessed that feature). The user can remove any products here. Or continue shopping.<br/><br/>
 💎 The cart is stored on `localStorage` so the user can keep the cart on different shopping sessions.
 
-🦾 The page is fully responsive and easy to interact to with keyboard only.
+🦾 The page is fully responsive and easy to interact to with keyboard only ⌨️.
 
 ---
 ---
