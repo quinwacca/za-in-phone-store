@@ -121,7 +121,7 @@ describe('searchProductsUseCase Test', () => {
     const [useCaseError, useCaseResponse] = await searchProductsUseCase()
 
     expect(useCaseError).toBeNull()
-    expect(useCaseResponse.length).toBe(10)
+    expect(useCaseResponse.length).toBe(9)
     expect(useCaseResponse).toStrictEqual(fixture)
   })
 

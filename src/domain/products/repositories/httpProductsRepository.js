@@ -31,12 +31,21 @@ export class HttpProductsRepository {
 
     const apiUrl = `${this.#productsApiUrl}?${urlSearchParams.toString()}`
 
-    return this.#fetcher.get(apiUrl).then(res => {
-      if (res.status !== 200) {
-        throw new Error('Product not found')
-      }
+    return this.#fetcher
+      .get(apiUrl)
+      .then(res => {
+        if (res.status !== 200) {
+          throw new Error('Product not found')
+        }
 
-      return res.json()
-    })
+        return res.json()
+      })
+      .then(products => {
+        // had to remove duplicates to avoid React warning about keys
+        // XMI-RN13P5G appears more than once in the list
+        return Array.from(new Set(products.map(product => product.id))).map(id =>
+          products.find(product => product.id === id)
+        )
+      })
   }
 }

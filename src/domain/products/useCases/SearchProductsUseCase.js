@@ -1,6 +1,9 @@
 import {HttpProductsRepository} from '../repositories/httpProductsRepository'
 
-const RESULTS_BY_PAGE = 20
+// had to ask for one more item to avoid React warning about keys
+// XMI-RN13P5G appears more than once in the list
+// and its filtered on the repository layer
+const RESULTS_BY_PAGE = 21
 
 export class SearchProductsUseCase {
   #repository
