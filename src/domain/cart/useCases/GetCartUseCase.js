@@ -12,6 +12,8 @@ export class GetCartUseCase {
   }
 
   async execute() {
-    return this.#repository.getCart()
+    const itemListValueObject = await this.#repository.getCart()
+
+    return itemListValueObject.getItemList()
   }
 }

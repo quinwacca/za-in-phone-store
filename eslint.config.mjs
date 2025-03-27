@@ -14,7 +14,7 @@ const eslintConfig = [
       'plugin:prettier/recommended',
       'plugin:jsx-a11y/recommended'
     ],
-    plugins: ['prettier', 'jsx-a11y'],
+    plugins: ['prettier', 'jsx-a11y', 'no-only-tests'],
     rules: {
       'prettier/prettier': [
         'error',
@@ -38,6 +38,7 @@ const eslintConfig = [
       'prefer-const': 'error',
       'no-undef': 'error',
       'no-console': 'warn',
+      'no-only-tests/no-only-tests': 'error',
       'react/react-in-jsx-scope': 'off',
       'jsx-a11y/alt-text': 'warn',
       'jsx-a11y/aria-props': 'warn',

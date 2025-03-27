@@ -66,4 +66,13 @@ describe('addToCartUseCase Test', () => {
     expect(useCaseError).toBeNull()
     expect(useCaseResponse).toStrictEqual([fixtureSamsung])
   })
+
+  it('should return an error if product cart item is not valid', async () => {
+    const {addToCartUseCase} = domain
+
+    const [useCaseError, useCaseResponse] = await addToCartUseCase({})
+
+    expect(useCaseError).toBeDefined()
+    expect(useCaseResponse).toBeNull()
+  })
 })
