@@ -1,6 +1,8 @@
 import {domain} from '@/domain'
+
 import ListSpecs from '@/components/list/specs'
 import PanelBuyProduct from '@/components/panel/buyProduct'
+import SliderCardProduct from '@/components/slider/cardProduct'
 
 import styles from './detailPage.module.css'
 
@@ -10,14 +12,13 @@ const DetailPage = async ({params}) => {
 
   if (Boolean(getProductError)) return <h2>{`Oops! Something went wrong!`}</h2>
 
-  const {brand, description, name, specs} = product
+  const {brand, description, name, similarProducts, specs} = product
 
   return (
     <div className={styles.detailWrapper}>
       <PanelBuyProduct product={product} />
-      <div className={styles.listSpecs}>
-        <ListSpecs {...{brand, description, name, ...specs}} />
-      </div>
+      <ListSpecs {...{brand, description, name, ...specs}} />
+      <SliderCardProduct products={similarProducts} />
     </div>
   )
 }

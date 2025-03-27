@@ -1,14 +1,13 @@
 .detailWrapper {
   --size-detail-wrapper-max-width: 1200px;
 
+  display: flex;
+  flex-direction: column;
+  gap: var(--margin-80);
   margin: 0 auto var(--margin-154);
   max-width: var(--size-detail-wrapper-max-width);
-}
-
-.listSpecs {
-  margin-top: var(--margin-80);
 
   @media (min-width: 1200px) {
-    margin-top: var(--margin-154);
+    gap: var(--margin-154);
   }
 }
