@@ -28,7 +28,7 @@ const ListSpecs = ({
   ]
 
   return (
-    <>
+    <div>
       <h2 className={styles.listTitle}>Specifications</h2>
       <ul className={styles.list}>
         {items.map(({spec, value}) => {
@@ -40,7 +40,7 @@ const ListSpecs = ({
           )
         })}
       </ul>
-    </>
+    </div>
   )
 }
 
