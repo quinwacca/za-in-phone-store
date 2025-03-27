@@ -12,34 +12,34 @@
 
   @media (min-width: 720px) {
     aspect-ratio: 1 / 1;
-  }
 
-  &:before {
-    background-color: var(--color-light-gray);
-    bottom: 0;
-    content: "";
-    left: 0;
-    height: 0%;
-    position: absolute;
-    width: 100%;
-    transition:
-      background-color 0.6s ease-in-out,
-      height 0.3s ease-in-out;
-    z-index: var(--z-index-card-background);
-  }
+    &:before {
+      background-color: var(--color-light-gray);
+      bottom: 0;
+      content: "";
+      left: 0;
+      height: 0%;
+      position: absolute;
+      width: 100%;
+      transition:
+        background-color 0.6s ease-in-out,
+        height 0.3s ease-in-out;
+      z-index: var(--z-index-card-background);
+    }
 
-  &:hover:before {
-    background-color: var(--color-black);
-    height: 100%;
+    &:hover:before {
+      background-color: var(--color-black);
+      height: 100%;
 
-    transition:
-      background-color 0.3s ease-in-out,
-      height 0.6s ease-out;
-  }
+      transition:
+        background-color 0.3s ease-in-out,
+        height 0.6s ease-out;
+    }
 
-  &:hover .infoName,
-  &:hover .infoPrice {
-    color: var(--color-text-light-gray);
+    &:hover .infoName,
+    &:hover .infoPrice {
+      color: var(--color-text-light-gray);
+    }
   }
 }
 
@@ -90,7 +90,7 @@
 }
 
 .infoBrand {
-  color: var(--color-text-light-gray);
+  color: var(--color-text-dark-gray);
   font-size: var(--font-size-10);
   font-weight: var(--font-weight-300);
   text-transform: uppercase;
