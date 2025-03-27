@@ -90,7 +90,7 @@
 }
 
 .infoBrand {
-  color: var(--color-text-light-gray);
+  color: var(--color-text-dark-gray);
   font-size: var(--font-size-10);
   font-weight: var(--font-weight-300);
   text-transform: uppercase;
