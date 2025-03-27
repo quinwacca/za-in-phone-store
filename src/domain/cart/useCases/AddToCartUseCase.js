@@ -1,6 +1,9 @@
 import {LocalStorageCartRepository} from '../repositories/localStorageCartRepository'
 
+import {ItemCartEntity} from '../entities/ItemCartEntity'
+
 export class AddToCartUseCase {
+  #itemEntityFactory
   #repository
 
   static create() {
@@ -8,10 +11,15 @@ export class AddToCartUseCase {
   }
 
   constructor() {
+    this.#itemEntityFactory = ItemCartEntity.create
     this.#repository = LocalStorageCartRepository.create()
   }
 
   async execute({id, model, selectedCapacity, selectedColor} = {}) {
-    return this.#repository.addToCart({id, model, selectedCapacity, selectedColor})
+    const itemEntity = this.#itemEntityFactory({id, model, selectedCapacity, selectedColor})
+
+    const itemListValueObject = await this.#repository.addToCart({itemEntity})
+
+    return itemListValueObject.getItemList()
   }
 }
