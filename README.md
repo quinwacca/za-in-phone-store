@@ -41,7 +41,7 @@ npm run lint    # next lint
 
 🌍 Online here : [mbst.vercel.app](https://mbst.vercel.app)
 
-📐 I built a webapp following the designs of the [Figma project](https://www.figma.com/design/Nuic7ePgOfUQ0hcBrUUQrb/Labs-%252F-Zara-Web-Challenge-(Smartphones)?node-id=0-1&t=70pTEDeKhVCCV25p-1) and replicating some animations found on the [Figma Prototype](https://www.figma.com/proto/Nuic7ePgOfUQ0hcBrUUQrb/Labs-%2F-Zara-Web-Challenge-(Smartphones)?page-id=1%3A121&node-id=20620-406&node-type=canvas&viewport=-127%2C-2609%2C0.17&t=kBCv81QvTf1Tbzjs-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=20620%3A1497&show-proto-sidebar=1).<br/><br/>
+🏗️ I built a webapp following the designs of the [Figma project](https://www.figma.com/design/Nuic7ePgOfUQ0hcBrUUQrb/Labs-%252F-Zara-Web-Challenge-(Smartphones)?node-id=0-1&t=70pTEDeKhVCCV25p-1) and replicating some animations found on the [Figma Prototype](https://www.figma.com/proto/Nuic7ePgOfUQ0hcBrUUQrb/Labs-%2F-Zara-Web-Challenge-(Smartphones)?page-id=1%3A121&node-id=20620-406&node-type=canvas&viewport=-127%2C-2609%2C0.17&t=kBCv81QvTf1Tbzjs-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=20620%3A1497&show-proto-sidebar=1).<br/><br/>
 🕹️ A user that arrives to the `home page` can search by brand or model, the search input has a `debounced trigger` to search without having to press Enter key. Also a custom icon has been added to clear the search input field.<br/><br/>
 👆 If clicks on a phone, it takes the user to `detail page`. If capacity and color has been selected the product can be added to the cart. Also on the detail page at the bottom the user can see `similar products` to navigate to other detail pages.<br/><br/>
 🛒 At the `cart page` we can see all the products added to the cart. There is no limit, but the user can not add the same product twice. (no counter appears on the design so I guessed that feature). The user can remove any products here. Or continue shopping.<br/><br/>
@@ -56,7 +56,7 @@ npm run lint    # next lint
 Inside `/src` folder we can see the structure of the project.
 
 
-### 🏗️ /app
+### ⚛️ /app
 The different pages (home, detail, and cart) are here.<br/>
 It's built with NextJS 15, implementing its SSR features (server side rendering), and using App Router.
 It has React 19 under the hood, so I added both server and client components.
@@ -92,7 +92,7 @@ Here we can find a collection of theme tokens. The webapp has been styled with C
 ---
 ---
 ## Others
-### 🔍 ESlint, Stylelint and Prettier
+### 🔍 ESlint, 📐 Stylelint and 😎 Prettier
 Linting and formatting the entire project, JavaScript and CSS files, extended with some custom rules.
 
 ### 🐺 Husky
