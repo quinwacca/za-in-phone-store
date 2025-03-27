@@ -1,5 +1,12 @@
 .slider {
   display: grid;
+  gap: var(--gap-40);
+}
+
+.listTitle {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-300);
+  text-transform: uppercase;
 }
 
 .list {
