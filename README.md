@@ -1,5 +1,5 @@
 ![MBST logo](./public/mbst-logo.svg)
-# MBST, a Zara challenge by Luis Garrido
+# MBST, a challenge by Luis Garrido
 
 ![image info](./public/colorpicker.gif)
 ## Getting Started
